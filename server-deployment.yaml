@@ -17,8 +17,7 @@ spec:
         image: harshyadav1309/aiplanet_assignment:server
         ports:
         - containerPort: 3000
-        env:
-        - name: MONGO_HOST
-          value: database
-        - name: MONGO_PORT
-          value: "27017"
+        environment:
+        - MONGO_HOST=database     
+        - MONGO_PORT=27017        
+      
