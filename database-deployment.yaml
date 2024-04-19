@@ -1,7 +1,6 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: database-rollout
   annotations:
     kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yaml
     kompose.version: 1.32.0 (765fde254)
@@ -39,5 +38,3 @@ spec:
         - name: mongodb-data
           persistentVolumeClaim:
             claimName: mongodb-data
-  strategy:
-    blueGreen: {}
