@@ -27,7 +27,7 @@ spec:
               value: database
             - name: MONGO_PORT
               value: "27017"
-          image: server
+          image: harshyadav1309/aiplanet_assignment:server
           name: server
           ports:
             - containerPort: 3000
