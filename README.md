@@ -1,45 +1,59 @@
-# movies-app
+# Devops Assigment
 
-# Introduction
+## Introduction
+The aim of this assignment is to understand the  hands-on experience with GitOps practices, utilizing Argo CD for continuous deployment and Argo Rollouts for advanced deployment strategies within a Kubernetes environment. You will be responsible for setting up a GitOps pipeline that automates the deployment and management of a simple web application.
 
-This repository is the result of the tutorial to develop your first MERN application and you can find it [here](https://medium.com/@samarony.barros/how-to-create-your-first-mern-mongodb-express-js-react-js-and-node-js-stack-7e8b20463e66)
+## Project Flow
 
-## What you should install?
+1. **Repository Cloning**: 
+    - Clone the MERN stack repository for movie CRUD operations.
 
-For this project, I decided to use the MERN (MongoDB, Express.js, React.js, and Node.js) technology.
-![mern](https://miro.medium.com/max/678/1*dqvlaszRLvoPmARpOlLN9A.png)
+2. **Docker Setup**:
+    - Develop Dockerfiles for the frontend and server components.
 
-Firstly, you should install
+3. **Docker Compose Configuration**:
+    - Create a `docker-compose.yaml` file orchestrating three containers: frontend, backend, and MongoDB database.
 
--   [Mongo](https://www.mongodb.com/) 4.0.4+
--   [ExpressJS](https://expressjs.com/) 4.16.3+
--   [ReactJS](https://reactjs.org/) 16.5.0+
--   [Node](https://nodejs.org/en/) 11.4.0+ (It's recommended to use 10.15.1 LTS)
+4. **Image Repository**:
+    - Push Docker images to Docker Hub for accessibility.
 
-## Download
+5. **Kubernetes Setup**:
+    - Install Minikube to facilitate creation of Kubernetes clusters.
 
-You can download the folder on my [GitHub](https://github.com/samaronybarros/) or you can do this directly on [this link](https://github.com/samaronybarros/movies-app).
+6. **ArgoCD Installation and Configuration**:
+    - Install and configure ArgoCD for continuous deployment.
 
-If you have git installed on your PC, you just need do as follow:
+7. **Namespace Creation**:
+    - Create a namespace for ArgoCD operations.
 
-```
-$ git clone https://github.com/samaronybarros/movies-app.git
-```
+8. **ArgoCD Application Creation**:
+    - Utilize the ArgoCD UI to create a new application, linking it to the GitHub repository.
 
-## Configuring App
+9. **Deployment File Generation**:
+    - Use Kompose to convert the `docker-compose.yaml` file into individual `deployment.yaml` files for Kubernetes.
 
-If you have all the prerequisites installed you should verify if your MongoDB is up.
+10. **Deployment and Validation**:
+    - Push deployment files to GitHub and ensure successful deployment through ArgoCD.
 
-```
-$ cd movies-app
-$ cd server
-$ yarn install
-$ nodemon index.js
-```
+11. **Rollout Configuration**:
+    - Modify deployment files to incorporate canary deployment strategies, adjusting traffic weights for controlled rollout.
 
-```
-$ cd movies-app
-$ cd client
-$ yarn install
-$ yarn start
-```
+12. **Continuous Integration**:
+    - Implement GitHub integration with ArgoCD for automatic deployment upon code changes.
+
+## Problem Solving
+
+1. **Deployment File Issues**:
+    - Faced health status errors initially due to manual deployment file creation. Resolved by using Kompose for automated conversion.
+
+2. **Rollout Errors**:
+    - Encounter deployment errors during rollout configurations. Overcome by adjusting configuration files as per requirements.
+
+3. **MongoDB Volume Creation**:
+    - Struggle initially with MongoDB volume creation. Resolve by realizing the necessity of creating volumes within the container using services.
+
+4. **Miscellaneous Issues**:
+    - Address other challenges with the aid of resources like Stack Overflow and ChatGPT, ensuring smooth project progression.
+
+## Conclusion
+Through meticulous setup, configuration, and problem-solving, the project successfully implements  Argo CD for continuous deployment and Argo Rollouts for advanced deployment strategies within a Kubernetes environment.
