@@ -17,9 +17,8 @@ spec:
         image: mongo:latest
         ports:
         - containerPort: 27017
-        volumeMounts:
-        - name: mongodb_data
-          mountPath: /data/db
-  volumes:
-  - name: mongodb_data
-    emptyDir: {}
+        volumes:
+      - mongodb_data:/data/db   
+
+volumes:
+  mongodb_data:
