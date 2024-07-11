@@ -1,9 +1,4 @@
-# Devops Assigment
-
-## Introduction
-The aim of this assignment is to understand the  hands-on experience with GitOps practices, utilizing Argo CD for continuous deployment and Argo Rollouts for advanced deployment strategies within a Kubernetes environment. You will be responsible for setting up a GitOps pipeline that automates the deployment and management of a simple web application.
-
-## Project Flow
+# Project Flow
 
 1. **Repository Cloning**: 
     - Clone the MERN stack repository for movie CRUD operations.
@@ -41,7 +36,7 @@ The aim of this assignment is to understand the  hands-on experience with GitOps
 12. **Continuous Integration**:
     - Implement GitHub integration with ArgoCD for automatic deployment upon code changes.
 
-## Problem Solving
+# Problem Solving
 
 1. **Deployment File Issues**:
     - Faced health status errors initially due to manual deployment file creation. Resolved by using Kompose for automated conversion.
@@ -55,5 +50,5 @@ The aim of this assignment is to understand the  hands-on experience with GitOps
 4. **Miscellaneous Issues**:
     - Address other challenges with the aid of resources like Stack Overflow and ChatGPT, ensuring smooth project progression.
 
-## Conclusion
+# Conclusion
 Through meticulous setup, configuration, and problem-solving, the project successfully implements  Argo CD for continuous deployment and Argo Rollouts for advanced deployment strategies within a Kubernetes environment.
